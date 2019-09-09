@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        #left {
+            cursor: pointer;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #right {
+            border-left: 1px solid blue;
+        }
+
+        .font-size-big {
+            font-size: 1.1rem;
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        li {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        ul>ul>li {
+            padding-left: 0rem;
+        }
+
+        li.li_open, li.li_closed {
+            padding-left: 0rem;
+        }
+
+        li.li_open::before {
+            /* list-style-type: disclosure-open; */
+            content: '▼';
+        }
+
+        li.li_closed::before {
+            /* list-style-type: disclosure-closed; */
+            content: '▶';
+        }
+
+        #express>div.row {
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="d-none d-lg-block col-md-3 mr-2">
+                <a href=""><img src="logo.bmp" alt="logo"></a>
+            </div>
+            <div class="d-none d-lg-block col-md-1"></div>
+            <div class="col col-md-5 mt-2">
+                <input type="text" class="form-control" id="input_keyword" placeholder="请输入涉及链接的关键词(以空格分隔)">
+
+            </div>
+            <div class="col col-md-2 mt-2 pl-0">
+                <button id="btn_search" type="button" class="btn btn-primary">搜&emsp;索</button>
+            </div>
+        </div>
+        <div class="row justify-content-center my-4">
+            <div id="left" class="col col-md-3 mr-3">
+                <div class="row">
+                    <div
+                        class="group_title col-12 bg-primary text-white font-weight-bold text-center py-1 font-size-big">
+                        国内法规政策
+                    </div>
+                    <ul>
+                        <li class="li_closed">国家层面</li>
+                        <ul style="display: none;">
+                            <li>国务院</li>
+                            <li>全国人大</li>
+                            <li>商务部</li>
+                            <li>工信部</li>
+                            <li>市场监管总局</li>
+                            <li>认监委</li>
+                            <li>交通部</li>
+                            <li>环境部</li>
+                            <li>公安部</li>
+                            <li>财政部</li>
+                            <li>发改委</li>
+                            <li>科技部</li>
+                            <li>海关总署</li>
+                            <li>税务总局</li>
+                            <li>农业部</li>
+                            <li>住建部</li>
+                        </ul>
+                        <li class="li_closed">重点区域</li>
+                        <ul style="display: none;">
+                            <li>北京</li>
+                            <li>上海</li>
+                            <li>广州</li>
+                            <li>深圳</li>
+                            <li>天津</li>
+                            <li>重庆</li>
+                            <li>西安</li>
+                        </ul>
+                        <li class="li_closed">华北地区</li>
+                        <ul style="display: none;">
+                            <li>河北</li>
+                            <li>山西</li>
+                            <li>内蒙古</li>
+                        </ul>
+                        <li class="li_closed">华东地区</li>
+                        <ul style="display: none;">
+                            <li>江苏</li>
+                            <li>浙江</li>
+                            <li>安徽</li>
+                            <li>福建</li>
+                            <li>江西</li>
+                            <li>山东</li>
+                        </ul>
+                        <li class="li_closed">东北地区</li>
+                        <ul style="display: none;">
+                            <li>黑龙江</li>
+                            <li>吉林</li>
+                            <li>辽宁</li>
+                        </ul>
+                        <li class="li_closed">中南地区</li>
+                        <ul style="display: none;">
+                            <li>河南</li>
+                            <li>湖北</li>
+                            <li>湖南</li>
+                            <li>广东</li>
+                            <li>广西</li>
+                            <li>海南</li>
+                        </ul>
+                        <li class="li_closed">西南地区</li>
+                        <ul style="display: none;">
+                            <li>四川</li>
+                            <li>贵州</li>
+                            <li>云南</li>
+                            <li>西藏</li>
+                        </ul>
+                        <li class="li_closed">西北地区</li>
+                        <ul style="display: none;">
+                            <li>陕西</li>
+                            <li>甘肃</li>
+                            <li>青海</li>
+                            <li>宁夏</li>
+                            <li>新疆</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div
+                        class="group_title col-12 bg-primary text-white font-weight-bold text-center py-1 mt-1 font-size-big">
+                        国内标准
+                    </div>
+                    <ul>
+                        <li>国家标准</li>
+                        <li>行业标准</li>
+                        <li class="li_closed">地方标准</li>
+                        <ul style="display: none;">
+                            <li>重点区域</li>
+                            <li>华北地区</li>
+                            <li>华东地区</li>
+                            <li>东北地区</li>
+                            <li>中南地区</li>
+                            <li>西南地区</li>
+                            <li>西北地区</li>
+                        </ul>
+                        <li>团体标准</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div
+                        class="group_title col-12 bg-primary text-white font-weight-bold text-center py-1 mt-1 font-size-big">
+                        国内资讯</div>
+                    <ul>
+                        <li>主流媒体</li>
+                        <li>微信公众号</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div
+                        class="group_title col-12 bg-primary text-white font-weight-bold text-center py-1 mt-1 font-size-big">
+                        国外信息
+                    </div>
+                    <ul>
+                        <li>国外法规</li>
+                        <li>国外资讯</li>
+                        <li>国外标准</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="right" class="col col-md-8 pl-5 ">
+                <div class="row">
+                    <div class="alert alert-primary" role="alert">
+                        <strong id="express_title">当前分类：</strong>
+                    </div>
+                </div>
+                <div id="express" class="ml-2 text-primary">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./reflect.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
